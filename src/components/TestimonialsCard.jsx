@@ -58,6 +58,9 @@ const Testimonials = () => {
           style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
           ref={containerRef}
         >
+          {/* TODO: you are looping over the same data instead of taking them from props
+            then you are calling the TestimonialsCard, which you are in currently in
+            which makes an inifite loop */}
           {testimonials.map((test, index) => (
             <div key={test.key} className="testimonial-card flex-shrink-0 w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(50%-0.5rem)]">
               <TestimonialsCard {...test} />
