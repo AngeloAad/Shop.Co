@@ -60,6 +60,7 @@ const Testimonials = () => {
           style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
           ref={containerRef}
         >
+          {/* TODO: This is the first loop, looks fine from here */}
           {testimonials.map((test, index) => (
             <div key={test.key} className="testimonial-card flex-shrink-0" style={{ maxWidth: '610px', width: '100%' }}>
               <TestimonialsCard {...test} />
