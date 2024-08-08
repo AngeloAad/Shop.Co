@@ -19,6 +19,13 @@ import man2 from "./man2.png"
 import man3 from "./man3.png"
 import woman1 from "./woman1.png"
 import banks from "./banks.png"
+import tshirt1 from "./tshirt1.png"
+import tshirt2 from "./tshirt2.png"
+import tshirt3 from "./tshirt3.png"
+import tshirt4 from "./tshirt4.png"
+import tshirt5 from "./tshirt5.png"
+import tshirt6 from "./tshirt6.png"
+import tshirt7 from "./tshirt7.png"
 
 export {
     hero,
@@ -42,4 +49,11 @@ export {
     man3,
     woman1,
     banks,
+    tshirt1,
+    tshirt2,
+    tshirt3,
+    tshirt4,
+    tshirt5,
+    tshirt6,
+    tshirt7,
 }

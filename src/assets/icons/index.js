@@ -11,9 +11,13 @@ import star5 from "./5-stars.svg"
 import arrowLeft from "./arrow-left.svg"
 import arrowRight from "./arrow-right.svg"
 import checkMark from "./check-mark.svg"
+import checkMark2 from "./check-mark2.svg"
 import options from "./options.svg"
 import email from "./email-icon.svg"
 import social from "./Social.svg"
+import filter from "./filter.svg"
+import trash from "./trash.svg"
+import coupon from "./coupon.svg"
 
 export {
     search,
@@ -29,7 +33,11 @@ export {
     arrowLeft,
     arrowRight,
     checkMark,
+    checkMark2,
     options,
     email,
     social,
+    filter,
+    trash,
+    coupon,
 }

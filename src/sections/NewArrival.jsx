@@ -18,7 +18,7 @@ const NewArrival = () => {
       >
         {first4.map((product) => (
           <div key={product.key}>
-            <NewArrivalCard {...product} />
+              <NewArrivalCard product={product} />
           </div>
         ))}
       </div>

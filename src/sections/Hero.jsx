@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="flex xl:flex-row flex-col">
 
-        <div className="relative flex-1 flex-start flex-col md:pt-[140px] pt-[69px] "
+        <div className="relative flex-1 flex-start flex-col md:pt-[140px] pt-[69px]"
         >
             <div
             className="flex flex-row justify-beetween
@@ -30,7 +30,7 @@ const Hero = () => {
 
             <Button label="Shop Now"
             className="font-montserrat text-[16px] md:w-[210px] 
-            rounded-[62px] mt-6 " />
+            rounded-[62px] mt-6" />
 
             <div className="flex-start flex-wrap gap-10 pt-16">
                 {stats.map((stat) => (

@@ -9,33 +9,36 @@ const Testimonials = () => {
   const [cardWidth, setCardWidth] = useState(0);
 
   useEffect(() => {
-    // Set the card width based on the current screen size
+    const container = containerRef.current;
+    if (!container) return;
+  
     const updateCardWidth = () => {
-      if (containerRef.current) {
-        const card = containerRef.current.querySelector('.testimonial-card');
-        if (card) {
-          setCardWidth(card.clientWidth);
-        }
-        
-      }
+      const card = container.querySelector('.testimonial-card');
+      if (!card) return;
+      const newCardWidth = card.clientWidth + 16; // Adjusting the gap between cards
+      setCardWidth(newCardWidth); // Update cardWidth without accumulating
     };
-
+  
+    const resizeObserver = new ResizeObserver(updateCardWidth);
+    const card = container.querySelector('.testimonial-card');
+    if (card) {
+      resizeObserver.observe(card);
+    }
+  
+    // Initial setting of card width
     updateCardWidth();
-    window.addEventListener('resize', updateCardWidth);
-
-    return () => window.removeEventListener('resize', updateCardWidth);
-  }, []);
+  
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);  
 
   const handlePrevClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   const handleNextClick = () => {
-    if (currentIndex < testimonials.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, testimonials.length - 1));
   };
 
   return (
@@ -48,20 +51,23 @@ const Testimonials = () => {
           <button onClick={handlePrevClick} disabled={currentIndex === 0}>
             <img src={arrowLeft} alt="Previous" className={`${currentIndex === 0 ? 'cursor-not-allowed' : 'cursor-pointer'}`} />
           </button>
-          <button onClick={handleNextClick} disabled={currentIndex >= testimonials.length - 1}>
+          <button onClick={handleNextClick} disabled={currentIndex >= testimonials.length - 2}>
             <img src={arrowRight} alt="Next" className={`${currentIndex >= testimonials.length - 1 ? 'cursor-not-allowed' : 'cursor-pointer'}`} />
           </button>
         </div>
       </div>
-      
+
       <div className="overflow-hidden w-full">
         <div
-          className="transition-transform duration-[1000ms] flex"
+          className="transition-transform duration-[1000ms] flex gap-4"
           style={{ transform: `translateX(-${currentIndex * cardWidth}px)` }}
           ref={containerRef}
         >
           {testimonials.map((test, index) => (
-            <div key={test.key} className="testimonial-card flex-shrink-0" style={{ maxWidth: '610px', width: '100%' }}>
+            <div
+              key={test.key}
+              className="testimonial-card flex-shrink-0 max-w-full md:w-[calc(50%-8px)] xl:max-w-[610px]"
+            >
               <TestimonialsCard {...test} />
             </div>
           ))}

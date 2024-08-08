@@ -24,7 +24,7 @@ const Subscribe = () => {
                 <input 
                 type="text"
                 placeholder="Enter your email address"
-                className="pl-3 text-[16px] leading-none "
+                className="pl-3 text-[16px] leading-none border-none outline-none"
                 />
             {/* </div> */}
         </div>

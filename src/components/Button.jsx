@@ -29,7 +29,7 @@ const Button = ({
         <img 
           src={iconURL}  
           alt="icon" 
-          className=""
+          className="text-white"
         />
       )}
     </button>

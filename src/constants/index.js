@@ -1,14 +1,14 @@
 import { versace, zara, gucci, prada, calvinKlein, image1, img2test,
-    image3, image4, image5, image6, image7, img8test
+    image3, image4, image5, image6, image7, img8test, tshirt1, tshirt2, tshirt3, tshirt4,
+    tshirt5, tshirt6, tshirt7
  } from "../assets/images";
 import { checkMark, options, star3, star3p5, star4, star4p5, star5 } from "../assets/icons";
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export const navLinks = [
-    // { href: "#home", label: "Home" },
-    { href: "#about-us", label: "Shop" },
-    { href: "#products", label: "On Sale" },
-    { href: "#contact-us", label: "New Arrivals" },
-    { href: "#myBag", label: "Brands" },
+    { href: "/#onSale", label: "On Sale" },
+    { href: "/#newArrivals", label: "New Arrivals" },
+    { href: "/#brands", label: "Brands" },
 ];
 
 export const stats = [
@@ -123,6 +123,130 @@ export const stats = [
         ratingNumber: "4.5/",
         price: "$210",
     },
+];
+
+export const clothes = [
+  {
+    key:"img-1",
+    imgURL: image1,
+    name: "T-shirt With Tape Details",
+    rating: star4p5,
+    ratingNumber: "4.5/",
+    price: "$120",
+    description: "This T-shirt with tape details is perfect for adding a stylish touch to your casual wardrobe. Made from a soft and breathable fabric, it ensures all-day comfort and a sleek look.",
+},
+{
+    key:"img-2",
+    imgURL: img2test,
+    name: "Skinny Fit Jeans",
+    rating: star3p5,
+    ratingNumber: "3.5/",
+    price: "$240",
+    originalPrice: "$260",
+    discount: "-20%",
+    description: "These skinny fit jeans offer a modern, streamlined look that complements any outfit. Crafted from high-quality denim, they provide a comfortable fit and excellent durability for everyday wear.",
+},
+{
+    key:"img-3",
+    imgURL: image3,
+    name: "Checkered Shirt",
+    rating: star4p5,
+    ratingNumber: "4.5/",
+    price: "$180",
+    description: "This checkered shirt is a versatile addition to any wardrobe. Made from a lightweight and breathable fabric, it offers both style and comfort, making it ideal for both casual and semi-formal occasions.",
+},
+{
+    key:"img-4",
+    imgURL: image4,
+    name: "Sleeve Stripped T-shirt",
+    rating: star4p5,
+    ratingNumber: "4.5/",
+    price: "$130",
+    originalPrice: "$160",
+    discount: "-30%",
+    description: "The sleeve striped T-shirt is perfect for a trendy, laid-back look. Made from a soft and breathable material, it combines style and comfort effortlessly, making it a great choice for any casual outing.",
+},
+{
+    key:"img-5",
+    imgURL: image5,
+    name: "Vertical Stripped Shirt",
+    rating: star5,
+    ratingNumber: "5.0/",
+    price: "$212",
+    originalPrice: "$232",
+    discount: "-20%",
+    description: "TThis vertical striped shirt brings a touch of sophistication to your wardrobe. Made from premium fabric, it provides a comfortable fit and a polished look, suitable for both casual and formal settings.",
+},
+{
+    key:"img-6",
+    imgURL: image6,
+    name: "Courage Graphic T-shirt",
+    rating: star4,
+    ratingNumber: "4.0/",
+    price: "$145",
+    description: "The Courage graphic T-shirt is designed to make a statement. Crafted from soft and breathable fabric, it offers superior comfort and style, perfect for showcasing your bold personality.",
+},
+{
+    key:"img-7",
+    imgURL: image7,
+    name: "Loose Fit Bermuda Shorts",
+    rating: star3,
+    ratingNumber: "3.0/",
+    price: "$80",
+    description: "These loose fit Bermuda shorts are perfect for a relaxed, comfortable look. Made from lightweight and breathable fabric, they provide all-day comfort, making them ideal for warm weather.",
+},
+{
+    key:"img-8",
+    imgURL: img8test,
+    name: "Faded Skinny Jeans",
+    rating: star4p5,
+    ratingNumber: "4.5/",
+    price: "$210",
+    description: "These faded skinny jeans offer a trendy, worn-in look that adds character to any outfit. Crafted from high-quality denim, they provide a comfortable fit and excellent durability, perfect for everyday wear.",
+},
+];
+
+export const tshirts = [
+  {
+    key:"img-1-",
+    imgURL: tshirt4,
+    name: "Polo with Contrast Trims",
+    rating: star4,
+    ratingNumber: "4/",
+    price: "$212",
+    originalPrice: "$242",
+    discount: "-20%",
+    description: "This polo with contrast trims is perfect for adding a touch of sophistication to your casual wardrobe. Crafted from high-quality fabric, it offers a comfortable fit and a polished look for any occasion.",
+},
+{
+    key:"img-2-",
+    imgURL: tshirt5,
+    name: "Gradient Graphic T-shirt",
+    rating: star3p5,
+    ratingNumber: "3.5/",
+    price: "$145",
+    description: "The gradient graphic T-shirt is designed to stand out with its unique color fade effect. Made from soft and breathable fabric, it provides superior comfort and style, perfect for a modern, trendy look.",
+},
+{
+    key:"img-3-",
+    imgURL: tshirt6,
+    name: "Polo with Tipping Details",
+    rating: star4p5,
+    ratingNumber: "4.5/",
+    price: "$180",
+    description: "This polo with tipping details combines classic style with a modern twist. Made from premium materials, it ensures a comfortable fit and a refined appearance, making it suitable for both casual and smart-casual occasions.",
+},
+{
+    key:"img-4-",
+    imgURL: tshirt7,
+    name: "Black Striped T-shirt",
+    rating: star5,
+    ratingNumber: "5/",
+    price: "$120",
+    originalPrice: "$150",
+    discount: "-30%",
+    description: "The black striped T-shirt is a versatile piece that adds a stylish edge to any outfit. Crafted from soft and breathable fabric, it offers a comfortable fit and a sleek look, perfect for everyday wear.",
+},
 ];
 
 export const testimonials = [

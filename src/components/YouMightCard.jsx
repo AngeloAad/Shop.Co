@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-const NewArrivalCard = ({product}) => {
-  const {imgURL, name, rating, ratingNumber, price, originalPrice, discount, key} = product;
+const YouMightCard = ({product}) => {
+  const {imgURL, name, rating, ratingNumber, price, originalPrice, discount, description, key} = product;
   
   return (
     <div className="flex flex-col px-3 w-full justify-center ">
-      <Link to={`/tshirts?clothes=${key}`} onClick={() => { imgURL, name, rating, ratingNumber, price, originalPrice, discount }}>
+      <Link to={`/tshirts?item=${product.key}`} onClick={() => { imgURL, name, rating, ratingNumber, price, originalPrice, discount, description }}>
       <div className="bg-[#F0EEED] rounded-[20px] sm:h-[298px] sm:w-[298px] h-[200px] w-[200px]">
         <img
           src={imgURL}
@@ -42,6 +42,6 @@ const NewArrivalCard = ({product}) => {
 
     </div>
   );
-};
+}
 
-export default NewArrivalCard;
+export default YouMightCard

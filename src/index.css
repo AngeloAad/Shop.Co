@@ -24,7 +24,7 @@
     max-width: 610px;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1440px) {
     .testimonial-card {
       width: 100%; /* Adjust this if you want to show more cards at larger screens */
     }

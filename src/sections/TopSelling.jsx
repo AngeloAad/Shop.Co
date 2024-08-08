@@ -18,7 +18,7 @@ const TopSelling = () => {
       >
         {second4.map((product) => (
           <div key={product.key}>
-            <TopSellingCard {...product} />
+            <TopSellingCard product={product} />
           </div>
         ))}
       </div>

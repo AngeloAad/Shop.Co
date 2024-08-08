@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-import Aside from "./Aside";
+import SideBar from "./SideBar";
 import Button from "./Button";
 import NewArrivalCard from "./NewArrivalCard";
 import TopSellingCard from "./TopSellingCard";
@@ -8,7 +8,7 @@ import Footer from "./Footer"
 
 export {
     NavBar,
-    Aside,
+    SideBar,
     Button,
     NewArrivalCard,
     TopSellingCard,

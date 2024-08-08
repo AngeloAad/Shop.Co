@@ -34,9 +34,21 @@ export default {
       screens: {
         "wide": "1440px",
         'xs': '440px',
-        'ss': '388px',
-      }
+        'ss': '380px',
+      },
+      filter: {
+        'invert': 'invert(1)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.filter-invert': {
+          filter: 'invert(1)',
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
+  ],
 }
